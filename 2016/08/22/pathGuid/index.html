@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+
+  <html class="dark page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>前端开发 环境搭建 | Hexo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="nodejs,nginx,cookingjs,cnpm," />
+  
+
+  <meta name="description" content="创建日期：2016.8.22   1.nodejs 环境：尽管主要工作语言不是nodejs，但是常常在使用到一些包或者插件的时候需要nodejs环境的支持。    node.js环境搭建nodejs是一个c++写的一个解释器，用于把javascript转换成电脑或服务器上可执行的代码。一般用来开发服务端代码或者是作为开发计算机脚本。同时nodejs环境也可以给前端开发带来方便。前端工程师用node">
+<meta name="keywords" content="nodejs,nginx,cookingjs,cnpm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端开发 环境搭建">
+<meta property="og:url" content="http://yoursite.com/2016/08/22/pathGuid/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="创建日期：2016.8.22   1.nodejs 环境：尽管主要工作语言不是nodejs，但是常常在使用到一些包或者插件的时候需要nodejs环境的支持。    node.js环境搭建nodejs是一个c++写的一个解释器，用于把javascript转换成电脑或服务器上可执行的代码。一般用来开发服务端代码或者是作为开发计算机脚本。同时nodejs环境也可以给前端开发带来方便。前端工程师用node">
+<meta property="og:updated_time" content="2017-04-06T13:29:45.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端开发 环境搭建">
+<meta name="twitter:description" content="创建日期：2016.8.22   1.nodejs 环境：尽管主要工作语言不是nodejs，但是常常在使用到一些包或者插件的时候需要nodejs环境的支持。    node.js环境搭建nodejs是一个c++写的一个解释器，用于把javascript转换成电脑或服务器上可执行的代码。一般用来开发服务端代码或者是作为开发计算机脚本。同时nodejs环境也可以给前端开发带来方便。前端工程师用node">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="https://github.com/lukastong"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            Github
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="https://500px.com/zhaotong0612"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            500px
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-nodejs-环境："><span class="toc-text">1.nodejs 环境：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#node-js环境搭建"><span class="toc-text">node.js环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ruby环境搭建-可选"><span class="toc-text">Ruby环境搭建(可选)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-推荐前端使用的工具："><span class="toc-text">2.推荐前端使用的工具：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-cnpm"><span class="toc-text">1)cnpm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-nginx"><span class="toc-text">2)nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-cooking"><span class="toc-text">3)cooking</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-编辑器"><span class="toc-text">3.编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Example"><span class="toc-text">4.Example</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-pathGuid" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">前端开发 环境搭建</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.08.22</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>John Doe</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/Web/">Web</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://lukastong.github.io//2016/08/22/pathGuid/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <font color="gray">创建日期：2016.8.22</font>
+
+
+<h2 id="1-nodejs-环境："><a href="#1-nodejs-环境：" class="headerlink" title="1.nodejs 环境："></a><strong>1.nodejs 环境：</strong></h2><font color="gray"><em>尽管主要工作语言不是nodejs，但是常常在使用到一些包或者插件的时候需要nodejs环境的支持。</em></font>
+
+
+<hr>
+<h3 id="node-js环境搭建"><a href="#node-js环境搭建" class="headerlink" title="node.js环境搭建"></a><strong>node.js环境搭建</strong></h3><p>nodejs是一个c++写的一个解释器，用于把javascript转换成电脑或服务器上可执行的代码。一般用来开发服务端代码或者是作为开发计算机脚本。同时nodejs环境也可以给前端开发带来方便。<br>前端工程师用nodejs主要是因为前端的各种工具大部分基于nodejs的，而这些依赖包可以优化前端的开发流程。<br>安装好了nodejs之后，就会自带一个<font color="red">npm(Node Package Manager)</font>的包管理工具，可以用它去安装一些前端开发其他的工具。</p>
+<p><strong>安装步骤：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1:先安装一个nvm（用于nodejs的版本管理）~~~~</div><div class="line">$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash</div><div class="line"></div><div class="line">2:安装 nodejs (安装v5.0.0版本，目前最新版本v6.3.0)</div><div class="line">$ nvm install v5.0.0</div><div class="line"></div><div class="line">3:设置nodejs默认版本</div><div class="line">$ nvm alias default v5.0.0</div></pre></td></tr></table></figure>
+<font size="2" color="gray">安装Nodejs后即可开始NPM之旅了.<br>在项目中新建一个package.json或者通过npm init，来更好的为NPM服务；<br>配置package.json的dependencies属性和devDependencies属性，指定生产环境和开发环境所需依赖的包；<br><em><em>然而目前devDependencies和dependencies区分的不是特别明确，有的时候用devDependencies安装会遇到各种各样依赖的问题（因为逻辑不一样）。目前比较流行的用法是全部扔进dependencies，然后通过build的步骤完成部署上线</em></em><br><br>命令行<code>npm install</code>即可全部安装package.json中的依赖包；<br><br>或者<code>npm install -g moduleName</code>来全局安装某个模块;<br><code>npm install --save moduleName</code>安装生产环境所需的包;<br><code>npm install --dev moduleName</code>安装开发环境所需的包</font>
+
+
+
+<hr>
+<h3 id="Ruby环境搭建-可选"><a href="#Ruby环境搭建-可选" class="headerlink" title="Ruby环境搭建(可选)"></a><strong>Ruby环境搭建(可选)</strong></h3><p>gem是ruby环境的安装工具，类似于node中的npm<br>安装好了ruby之后，就会自带一个<font color="red">gem</font>的包管理工具，可以用它去安装一些前端的开发工具。<br>但是gem用的情况比较少，一般用到gem是因为要用Gulp这个类似Grunt的编译工具以及相关的依赖。主要是为了Sass编译用的（因为是ruby写的）</p>
+<p><strong>安装步骤</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">$ curl -L https://get.rvm.io | bash -s stable</div><div class="line"></div><div class="line">//载入 RVM 环境</div><div class="line">$ source ~/.rvm/scripts/rvm</div><div class="line">$ rvm -v //打印版本号，检查安装是否正确</div><div class="line"></div><div class="line">//用 RVM 安装 Ruby 环境</div><div class="line">$ rvm requirements</div><div class="line">$ rvm install 2.3.0</div><div class="line"></div><div class="line">//设置 Ruby 版本</div><div class="line">$ rvm use 2.3.0 --default</div><div class="line"></div><div class="line">//安装Rails环境</div><div class="line">$ gem install rails</div></pre></td></tr></table></figure>
+<font size="2" color="gray">默认情况下，Mac OS X 系统已经安装好 Ruby，安装在 /System/Library/Frameworks/Ruby.framework/Versions/Current 目录下。<br>建议不要随便卸载mac自带的ruby，python等程序。自己另外装一套，或者用rvm都是很好的解决办法。</font>
+
+<hr>
+<h2 id="2-推荐前端使用的工具："><a href="#2-推荐前端使用的工具：" class="headerlink" title="2.推荐前端使用的工具："></a><strong>2.推荐前端使用的工具：</strong></h2><h3 id="1-cnpm"><a href="#1-cnpm" class="headerlink" title="1)cnpm"></a><strong>1)cnpm</strong></h3><p>npm官网并没有被墙，但是下载第三方依赖包的速度有些时候非常让人捉急，此时就需要cnpm来解决”挤牙膏”的问题。淘宝NPM镜像是一个完整的npmjs.org镜像，你可以用此代替官方版本，同步率目前为10分钟，你可以使用cnpm命令行工具替代默认的NPM，<br><strong>安装：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure>
+<p>然后就可以像使用npm一样通过cnpm来安装你所需的包了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cnpm install moduleName</div></pre></td></tr></table></figure>
+<h3 id="2-nginx"><a href="#2-nginx" class="headerlink" title="2)nginx"></a><strong>2)nginx</strong></h3><p><strong>用途：</strong><br>nginx是一个轻量级的Web服务器。前端开发使用nginx主要是为了实现url rewrite（重写）来使用后台的api（避免跨域请求）<br>nginx作为代理服务器，在开发过程中，可转发网络请求，可使局域网内部机器通过nginx发送请求到互联网上的服务器。Nginx还可以实现无缓存的反向代理加速，提高前端开发效率。</p>
+<p><strong>安装：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">//安装nginx</div><div class="line">$ brew install nginx   </div><div class="line"></div><div class="line">//启动</div><div class="line">$ sudo nginx         </div><div class="line"></div><div class="line">//查看nginx安装目录</div><div class="line">$ which nginx        </div><div class="line"></div><div class="line">//到nginx的安装目录下</div><div class="line">$ cd /usr/local/etc/nginx/servers</div><div class="line"></div><div class="line">//编辑配置文件</div><div class="line">$ vim example.conf      </div><div class="line">server &#123;</div><div class="line">   listen   8080;</div><div class="line">   server_name example.loc;</div><div class="line"></div><div class="line">   location / &#123;</div><div class="line">       proxy_pass   http://localhost:1111; </div><div class="line">        &#125;</div><div class="line"></div><div class="line">   location ~ ^/(w|api)/ &#123;</div><div class="line">   //匹配任意以/w/ 或者 /api/开头的地址，永久重定向到example.com</div><div class="line">   //rewrite是在同一域名内更改获取资源的路径</div><div class="line">    rewrite ^/(api|w)/(.*)$ /$1/$2 break;</div><div class="line">    proxy_pass https://example.com</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//重启nginx</div><div class="line">$ nginx -s reload       </div><div class="line"></div><div class="line">//编辑hosts文件</div><div class="line">$ sudo vim /etc/hosts  </div><div class="line">  在文件最后加上⬇️</div><div class="line">127.0.0.1 example.loc(example.conf中server_name的地址)</div><div class="line">-</div></pre></td></tr></table></figure>
+<p><strong>简单使用：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//启动</div><div class="line">sudo nginx</div><div class="line"></div><div class="line">//停止</div><div class="line">sudo nginx -s stop</div><div class="line">nginx -s reload</div><div class="line">nginx -t</div></pre></td></tr></table></figure>
+<font size="2" color="gray">mac安装后，nginx的默认配置文件位置一般会在/usr/local/nginx/conf<br>启动后默认在80端口，就可以访问<a href="http://localhost/了" target="_blank" rel="external">http://localhost/了</a></font>
+
+
+<hr>
+<h3 id="3-cooking"><a href="#3-cooking" class="headerlink" title="3)cooking"></a><strong>3)cooking</strong></h3><p><strong>cooking是什么？</strong></p>
+<ul>
+<li>一个包含了基本依赖（Babel + webpack + 基本 loader）和预配置的 webpack</li>
+<li>基于 webpack 但更容易上手的构建工具</li>
+</ul>
+<p><strong>cooking安装:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm i cooking -g</div></pre></td></tr></table></figure>
+<p><strong>开发模式：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//默认将启动一个 server</div><div class="line">$ cooking watch</div></pre></td></tr></table></figure>
+<p><strong>构建：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//打包压缩文件，并输出到指定目录下</div><div class="line">$ cooking build</div></pre></td></tr></table></figure>
+<h2 id="3-编辑器"><a href="#3-编辑器" class="headerlink" title="3.编辑器"></a><strong>3.编辑器</strong></h2><p><strong>推荐使用：</strong><br>webstrom<br>sublime<br>Atom</p>
+<h2 id="4-Example"><a href="#4-Example" class="headerlink" title="4.Example"></a><strong>4.Example</strong></h2><p>徒手创建一个project来感受一下cooking脚手架。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">//创建脚手架</div><div class="line">$ cooking create my-project</div><div class="line"></div><div class="line">//terminal log</div><div class="line">[cooking] - generator project</div><div class="line">[slush] Using slushfile /Users/tongzhao/.cooking/node_modules/slush-cooking-vue/slushfile.js</div><div class="line">[09:37:06] Starting &apos;cooking-vue:default&apos;...</div><div class="line">[?] Give your app a name: test</div><div class="line">[?] Give your app a description: A vue project.</div><div class="line">[?] Private? No</div><div class="line">[?] Need dev server? Yes</div><div class="line">[?] What CSS preprocessor do you want to use? Only CSS</div><div class="line">[?] git repository:</div><div class="line">[?] author:</div><div class="line">[?] license: ISC</div><div class="line">[?] Continue? (Y/n) y</div><div class="line"></div><div class="line"></div><div class="line">//创建成功之后到my-project/cooking.conf.js修改其中：</div><div class="line">  devServer: &#123;</div><div class="line">    port: 1111,  //修改端口号</div><div class="line">    publicPath: &apos;/&apos;</div><div class="line">  &#125;,</div><div class="line">  </div><div class="line">extends: [&apos;vue&apos;]， </div><div class="line">// 删除 &apos;lint&apos;,这个lint主要是测试过程中报告warning的扩展插件</div><div class="line">//由于cooking脚手架create过程中不会自动安装lint所以依赖的包</div><div class="line">//在cooking watch时会报一些错。暂时删掉；</div><div class="line">//如果需要lint，可用npm安装：</div><div class="line">// $ npm install eslint-loader --save</div><div class="line">// $ npm install eslint --save</div><div class="line">// $ npm install eslint-plugin-react --save</div><div class="line">// $ npm install eslint-config-airbnb --save</div><div class="line">// $ npm install eslint-plugin-flow-vars --save</div><div class="line">// $ npm install eslint-plugin-import --save</div><div class="line">// $ npm install eslint-plugin-jsx-a11y --save</div><div class="line">// $ npm install eslint-plugin-react --save`</div><div class="line"></div><div class="line"></div><div class="line">//开始开发</div><div class="line">$ cooking watch</div></pre></td></tr></table></figure>
+<p>最后跑到 src/app.vue 中替换代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//app.vue是项目初始展示的页面，使用了vue框架，修改此文件内容只为了测试项目是否可以正常跑通。</div><div class="line">&lt;template&gt;</div><div class="line">  &lt;h1&gt;cooking test&lt;/h1&gt;</div><div class="line">  &lt;p&gt;i am the 15000 king, i am the new world&lt;/p&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">  export default &#123;</div><div class="line">    name: &apos;app&apos;</div><div class="line">  &#125;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>打开 <link><a href="http://localhost:1111/" target="_blank" rel="external">http://localhost:1111/</a> 查看页面显示</p>
+
+    
+  </div>
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持forsigner</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2016/08/26/UbuntuShadowsocks/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2016/04/20/UITableView/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="https://github.com/lukastong"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              Github
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="https://500px.com/zhaotong0612"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              500px
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'T.Zhao';
+    
+    var disqus_url = 'http://yoursite.com/2016/08/22/pathGuid/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//T.Zhao.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
