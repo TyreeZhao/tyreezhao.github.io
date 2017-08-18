@@ -7,6 +7,9 @@
       <categories>
         <category>book</category>
       </categories>
+      <tags>
+        <tag>chill</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[redis 搭建]]></title>
