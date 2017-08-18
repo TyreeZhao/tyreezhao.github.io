@@ -15,17 +15,17 @@
     <meta name="keywords" content="forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
   
 
-  <meta name="description" content="redis 搭建Installation12345678910111213141516//ou can either download the latest Redis tar ball from the redis.io web site, or you can alternatively use this special URL that always points to the latest">
+  <meta name="description" content="redis 搭建Installation you can either download the latest Redis tar ball from the redis.io web site, or you can alternatively use this special URL that always points to the latest stable Redis version,">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="redis 搭建">
 <meta property="og:url" content="http://yoursite.com/2017/08/10/redis搭建/index.html">
 <meta property="og:site_name" content="T.Zhao Blog">
-<meta property="og:description" content="redis 搭建Installation12345678910111213141516//ou can either download the latest Redis tar ball from the redis.io web site, or you can alternatively use this special URL that always points to the latest">
-<meta property="og:updated_time" content="2017-08-10T08:43:02.000Z">
+<meta property="og:description" content="redis 搭建Installation you can either download the latest Redis tar ball from the redis.io web site, or you can alternatively use this special URL that always points to the latest stable Redis version,">
+<meta property="og:updated_time" content="2017-08-18T04:03:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="redis 搭建">
-<meta name="twitter:description" content="redis 搭建Installation12345678910111213141516//ou can either download the latest Redis tar ball from the redis.io web site, or you can alternatively use this special URL that always points to the latest">
+<meta name="twitter:description" content="redis 搭建Installation you can either download the latest Redis tar ball from the redis.io web site, or you can alternatively use this special URL that always points to the latest stable Redis version,">
 
   
 
@@ -215,7 +215,14 @@
 
   <div class="article-content">
     
-      <h1 id="redis-搭建"><a href="#redis-搭建" class="headerlink" title="redis 搭建"></a>redis 搭建</h1><h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//ou can either download the latest Redis tar ball from the redis.io web site, or you can alternatively use this special URL that always points to the latest stable Redis version, that is, http://download.redis.io/redis-stable.tar.gz.</div><div class="line">In order to compile Redis follow this simple steps:</div><div class="line"></div><div class="line"></div><div class="line">$ wget http://download.redis.io/redis-</div><div class="line">$ stable.tar.gz</div><div class="line">$ tar xvzf redis-stable.tar.gz</div><div class="line">$ cd redis-stable</div><div class="line">$ make</div><div class="line"></div><div class="line"></div><div class="line">// It is a good idea to copy both the Redis server and the command line interface in proper places, either manually using the following commands:</div><div class="line"></div><div class="line">$	sudo cp src/redis-server /usr/local/bin/</div><div class="line">$	sudo cp src/redis-cli /usr/local/bin/</div></pre></td></tr></table></figure>
+      <h1 id="redis-搭建"><a href="#redis-搭建" class="headerlink" title="redis 搭建"></a>redis 搭建</h1><h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><ul>
+<li>you can either download the latest Redis tar ball from the redis.io web site, or you can alternatively use this special URL that always points to the latest stable Redis version, that is, <a href="http://download.redis.io/redis-stable.tar.gz" target="_blank" rel="external">http://download.redis.io/redis-stable.tar.gz</a>.<br>In order to compile Redis follow this simple steps:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$ wget http://download.redis.io/redis-</div><div class="line">$ stable.tar.gz</div><div class="line">$ tar xvzf redis-stable.tar.gz</div><div class="line">$ cd redis-stable</div><div class="line">$ make</div></pre></td></tr></table></figure>
+<ul>
+<li>It is a good idea to copy both the Redis server and the command line interface in proper places, either manually using the following commands:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$	sudo cp src/redis-server /usr/local/bin/</div><div class="line">$	sudo cp src/redis-cli /usr/local/bin/</div></pre></td></tr></table></figure>
 <h2 id="Starting-Redis"><a href="#Starting-Redis" class="headerlink" title="Starting Redis"></a>Starting Redis</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ redis-server</div><div class="line">7861:C 10 Aug 13:59:47.322 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo</div><div class="line">7861:C 10 Aug 13:59:47.323 # Redis version=4.0.1, bits=64, commit=00000000, modified=0, pid=7861, just started</div></pre></td></tr></table></figure>
 <h2 id="Check-if-Redis-is-working"><a href="#Check-if-Redis-is-working" class="headerlink" title="Check if Redis is working"></a>Check if Redis is working</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ redis-cli ping</div><div class="line">PONG</div></pre></td></tr></table></figure>
 <h1 id="Redis-imporing-method-in-Nodejs"><a href="#Redis-imporing-method-in-Nodejs" class="headerlink" title="Redis imporing method in Nodejs"></a>Redis imporing method in Nodejs</h1><ul>
