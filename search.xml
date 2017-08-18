@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[2017 - 下半年 书单]]></title>
+    <url>%2F2017%2F08%2F18%2Fbooklist%2F</url>
+    <content type="text"><![CDATA[2017 - 下半年 书单杂书 &lt;&lt; 这么慢， 那么美 &gt;&gt; （ 罗敷 ） &lt;&lt; 天才在左疯子在右(完整版)&gt;&gt; （高铭） &lt;&lt; 无证之罪 &gt;&gt; (1-3) (紫金陈) &lt;&lt; 时间之书：余世存说二十四节气 &gt;&gt; （余世存） &lt;&lt; 未来简史（完整图文版）&gt;&gt; （尤瓦尔·赫拉利） &lt;&lt; 海洋中的爱与性 &gt;&gt; （玛拉·J.哈尔特） &lt;&lt; 花朵的秘密生命:一朵花的自然史 &gt;&gt; （沙曼•阿普特•萝赛） &lt;&lt; 我们内心的冲突 &gt;&gt;（卡伦·霍妮） &lt;&lt; 简单的逻辑学 &gt;&gt; （D.Q.麦克伦尼）]]></content>
+      <categories>
+        <category>book</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[redis 搭建]]></title>
+    <url>%2F2017%2F08%2F10%2Fredis%E6%90%AD%E5%BB%BA%2F</url>
+    <content type="text"><![CDATA[redis 搭建Installation you can either download the latest Redis tar ball from the redis.io web site, or you can alternatively use this special URL that always points to the latest stable Redis version, that is, http://download.redis.io/redis-stable.tar.gz.In order to compile Redis follow this simple steps: 123456$ wget http://download.redis.io/redis-$ stable.tar.gz$ tar xvzf redis-stable.tar.gz$ cd redis-stable$ make It is a good idea to copy both the Redis server and the command line interface in proper places, either manually using the following commands: 12$ sudo cp src/redis-server /usr/local/bin/$ sudo cp src/redis-cli /usr/local/bin/ Starting Redis123$ redis-server7861:C 10 Aug 13:59:47.322 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo7861:C 10 Aug 13:59:47.323 # Redis version=4.0.1, bits=64, commit=00000000, modified=0, pid=7861, just started Check if Redis is working12$ redis-cli pingPONG Redis imporing method in Nodejs install redis with yarn or npm package tool. 12$ cd ./server$ yarn redis or $ npm instal redis write belows code in app.js 1const redis = require(&apos;redis&apos;), client = redis.createClient(); enjoy and use it]]></content>
+      <categories>
+        <category>backend</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Mac下安装Go和配置相应环境]]></title>
+    <url>%2F2017%2F01%2F01%2FMac%E4%B8%8B%E5%AE%89%E8%A3%85Go%E5%92%8C%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%BA%94%E7%8E%AF%E5%A2%83%2F</url>
+    <content type="text"><![CDATA[#Mac下安装Go和配置相应环境 ###方法： homebrewhomebrew是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 git mercurial 也安装上： 1234$brew update &amp;&amp; brew upgrade$brew install git$brew install mercurial$brew install go 这样安装之后通过命令行输入go就可以看到相关的信息。输入go env查看环境信息： 123456789101112131415GOARCH=&quot;amd64&quot;GOBIN=&quot;&quot;GOCHAR=&quot;6&quot;GOEXE=&quot;&quot;GOHOSTARCH=&quot;amd64&quot;GOHOSTOS=&quot;darwin&quot;GOOS=&quot;darwin&quot;GOPATH=&quot;&quot;GORACE=&quot;&quot;GOROOT=&quot;/usr/local/go&quot;GOTOOLDIR=&quot;/usr/local/go/pkg/tool/darwin_amd64&quot;CC=&quot;clang&quot;GOGCCFLAGS=&quot;-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fno-common&quot;CXX=&quot;clang++&quot;CGO_ENABLED=&quot;1&quot; ###环境变量配置 先新建一个专门管理go的文件夹，~/Document/go_workspace 1$mkdir ~/Document/go_workspace 指定一下GOPATH即可。为了让自己的程序编译之后在命令行任何地方能直接执行，再加入GOPATH下的bin即可： 1vim ~/.zshrc 1export GOPATH=$HOME/Documents/go_workspace 一般环境变量更改后，重启后生效。在重启终端的时候就会自动执行.bash_profile文件。如果想立刻生效，则可执行下面的语句：1$ source ~/.zshrc ##问题如果用户使用bash，就把上面所有对.zshrc的操作，追加到 ~/.bash_profile 中 end]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[vi 常用快捷键]]></title>
+    <url>%2F2016%2F10%2F20%2FvimGuide%2F</url>
+    <content type="text"><![CDATA[光标移动12345Ctrl + u 上Ctrl + d 下Ctrl + f 向文件尾部翻一个屏Ctrl + b 向文件首部翻一个屏 输入1234567o 在当前文字下一行输入O 在当前文字上一行输入i 在光标前输入I 在行首输入a 光标后输入A 当前行尾输入 复制删除123456789yy 将当前行复制到缓存区nyy 将当前行下n行复制到缓存区p 粘贴剪切板里的内容到光标后P 粘贴剪切板里的内容到广标前x 删除光标后的字符X 删除光标前的字符dd 删除当前行 撤销123u 撤销上一步操作U 撤销对当前行的所有操作]]></content>
+      <categories>
+        <category>others</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[前端开发知识树]]></title>
+    <url>%2F2016%2F10%2F01%2FFrontendKnowledge%2F</url>
+    <content type="text"><![CDATA[前端开发知识结构 前端工程师 浏览器 IE6/7/8/9/10/11 (Trident) Firefox (Gecko) Chrome/Chromium (Blink) Safari (WebKit) Opera (Blink) 编程语言 JavaScript/Node.js CoffeeScript TypeScript 切页面 HTML/HTML5 CSS/CSS3 Sass/LESS/Stylus/postCSS PhotoShop/Paint.net/Fireworks/GIMP/Sketch 开发工具 编辑器和IDE VIM/Sublime Text2 Notepad++/EditPlus WebStorm Emacs EmacsWiki Brackets Atom Lime Text Light Table Codebox TextMate Neovim Komodo IDE / Edit Eclipse Visual Studio/Visual Studio Code NetBeans Cloud9 IDE HBuilder Nuclide VS code 调试工具 Firebug/Firecookie YSlow IEDeveloperToolbar/IETester Fiddler Chrome Dev Tools Dragonfly DebugBar Venkman Charles 版本管理 Git/SVN/Mercurial Github/GitLab/Bitbucket/Gitorious/GNU Savannah/Launchpad/SourceForge/TeamForge 代码质量 Coding style JSLint/JSHint/jscs/ESLint CSSLint Markup Validation Service HTML Validators 单元测试 QUnit/Jasmine Mocha/Should/Chai/Expect Unit JS 自动化测试 WebDriver/Protractor/Karma Runner/Sahi phantomjs SourceLabs/BrowserStack 前端库/框架 jQuery/Underscore/Mootools/Prototype.js YUI3/Dojo/ExtJS/KISSY Backbone/KnockoutJS/Emberjs AngularJS Batarang Bootstrap Semantic UI Juice UI Web Atoms Polymer Dhtmlx qooxdoo React Brick vue.js template pug jade EJS 前端标准/规范 HTTP/1.1: RFCs 7230-7235 HTTP/2 ECMAScript3/5 ECMAScript6 W3C: DOM/BOM/XHTML/XML/JSON/JSONP/… CommonJS Modules/AMD HTML5/CSS3 Semantic Web MicroData RDFa Web Accessibility WCAG Role Attribute WAI-ARIA 性能 JSPerf YSlow 35 rules PageSpeed HTTPWatch DynaTrace’s Ajax 高性能JavaScript SEO 编程知识储备 数据结构 OOP/AOP 原型链/作用域链 闭包 编程范型 设计模式 Javascript Tips 部署流程 压缩合并 YUI Compressor Google Clousure Complier UglifyJS CleanCSS 文档输出 JSDoc Dox/Doxmate/Grunt-Doxmate 项目构建工具 make/Ant GYP Grunt Gulp Yeoman FIS Mod ES6＋ 转换器 Traceur Babel 代码组织 类库模块化 CommonJS/AMD YUI3模块 webpack 业务逻辑模块化 bower/component 文件加载 LABjs SeaJS/Require.js 模块化预处理器 Browserify 安全 CSRF/XSS CSP Same-origin policy ADsafe/Caja/Sandbox 移动Web HTML5/CSS3 响应式网页设计 Zeptojs/iScroll V5/Sencha Touch PhoneGap jQuery Mobile W3C Mobile Web Initiative W3C mobileOK Checker Open Mobile Alliance React Native 前沿技术社区/会议 D2/WebRebuild NodeParty/W3CTech/HTML5梦工厂 JSConf/沪JS(JSConf.cn) QCon/Velocity/SDCC JSConf/NodeConf CSSConf YDN/YUIConf HybridApp WHATWG MDN codepen w3cplus CNode 计算机知识储备 编译原理 计算机网络 操作系统 算法原理 软件工程/软件测试原理 Unicode 软技能 知识管理/总结分享 沟通技巧/团队协作 需求管理/PM 交互设计/可用性/可访问性知识 可视化 SVG/Canvas/VML SVG: D3/Raphaël/Snap.svg/DataV Canvas: CreateJS/KineticJS WebGL/Three.JS 后端工程师 编程语言 C/C++/Java/PHP/Ruby/Python/… 网页服务器 Nginx Apache Lighttpd 数据库 SQL MySQL/PostgreSQL/Oracle/DB2 MongoDB/CouchDB 数据缓存 Redis Memcached 文件缓存/代理 Varnish Squid 操作系统 Unix/Linux/OS X/Windows 数据结构 前端书籍推荐★越少越简单,越适合入门,★多的要么是难度比较高,要么是比较适合在后面看,比如讲性能之类的书. CSS Eric Meyer 谈 CSS（卷二）★★★ CSS权威指南 （第3版）★★ 精通CSS★★★ HTML &amp; CSS设计与构建网站★ JavaScript JavaScript &amp; jQuery交互式Web前端开发★ JavaScript DOM编程艺术 （第2版）★ JavaScript高级程序设计（第3版）★★ 锋利的jQuery★★ 高性能JavaScript★★★ JavaScript语言精粹★★★ JavaScript权威指南★★★ 编写可维护的JavaScript★★★ JAVASCRIPT语言精髓与编程实践★★★ Effective Javascript★★★ Secrets of the JavaScript Ninja★★★ JavaScript模式★★★ JavaScript设计模式★★★★ 基于MVC的JavaScript Web富应用开发★★★ 性能实践 高性能网站建设指南★ 高性能网站建设进阶指南★★ Web性能实践日志★★★ Web性能权威指南★★★ 版本控制工具 版本控制之道 (git)★★ Pro Git★★★ Git权威指南★★★★ 后端书籍推荐Linux管理 Linux 系统管理技术手册 鸟哥的 Linux 私房菜 Linux 101 Hacks UNIX Shell Scripting The Linux Command Line Linux Network Administrator’s Guide Linux编程 Linux程序设计 Linux系统编程 Unix环境高级编程 Unix编程艺术 The Linux Programming Interface 程序员的自我修养 深入理解Linux内核 Unix网络编程 TCP/IP高级编程 C/C++ Linux C编程一站式学习 C和指针 C陷阱与缺陷 C专家编程 C语言核心技术 彻底搞定C指针 征服C指针 C++编程思想 高质量程序设计指南—C/C++语言 Inside the C++ Object Model A Tour of C++ The C++ Programming Language The C++ Standard Library - A Tutorial and Reference The C++ Standard (INCITS/ISO/IEC 14882-2011) Overview of the New C++ 前端工作面试 前端工作面试问题 前端开发面试题（中文）]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[javaScript Switch]]></title>
+    <url>%2F2016%2F09%2F18%2FswitchFunction%2F</url>
+    <content type="text"><![CDATA[1234567891011let type = 1const typeMapping = &#123; 1: &apos;A1&apos;, 2: &apos;B&apos;, 3: &apos;C&apos;,&#125;let corpType = &apos;All&apos;if (typeMapping.hasOwnProperty(type)) &#123; corpType = typeMapping[type]&#125;]]></content>
+      <categories>
+        <category>others</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[HEXO deploy Guide]]></title>
+    <url>%2F2016%2F09%2F18%2Fhexodeploy%2F</url>
+    <content type="text"><![CDATA[基础配置12345678910打开 username.github.io/_config.yml修改几个键值对，下面把几个必须设置的列出来按需求修改，记得保存。title: dimsky 的 9 维空间 //你博客的名字author: dimsky //你的名字language: zh-Hans //语言 中文theme: next //刚刚安装的主题名称deploy:type: git //使用Git 发布repo: https://github.com/username/username.github.io // 刚创建的Github仓库 文本开头格式：12345---title: test titledate: 2016-9-18categories: others--- 测试服务器1$ hexo s 测试服务启动，你可以在浏览器中输入https://localhost:4000 访问了。 发布测试没问题后，我们就生成静态网页文件发布至我们的Github pages 中 1$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d]]></content>
+      <categories>
+        <category>others</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu 搭建 Shadowsocks]]></title>
+    <url>%2F2016%2F08%2F26%2FUbuntuShadowsocks%2F</url>
+    <content type="text"><![CDATA[在Ubuntu下安装ss很简单。只需要依次执行下面3条命令： 123apt-get updateapt-get install python-pippip install shadowsocks pip 是 python 下的方便安装的工具，类似 apt-get。 全部执行完毕且没有报错的话，我们的 shadowsocks 就算是装完了。接下来就是配置部署了。 写一个配置文件保存为etc/shadowsocks.json，文件内容如下： 12345678910&#123; &quot;server&quot;:&quot;my_server_ip&quot;, &quot;server_port&quot;:8388, &quot;local_address&quot;: &quot;127.0.0.1&quot;, &quot;local_port&quot;:1080, &quot;password&quot;:&quot;mypassword&quot;, &quot;timeout&quot;:300, &quot;method&quot;:&quot;aes-256-cfb&quot;, &quot;fast_open&quot;: false&#125; server, server_port, password 需要自行根据自己的实际情况修改。 配置文件编辑完成后，接下来就可以部署运行了： 12345//开启服务$ ssserver -c /etc/shadowsocks.json -d start//暂停服务$ ssserver -c /etc/shadowsocks.json -d stop 当然，我们可不希望每次重启服务器都手动启动 SS, 因此我们要把这条命令放到这个文件下：/etc/rc.d/rc.local，这样以后就能开机自动运行了。 或者也可以写成shell文件，每次运行脚本就可以完成。]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>server</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[前端开发 环境搭建]]></title>
+    <url>%2F2016%2F08%2F22%2FpathGuid%2F</url>
+    <content type="text"><![CDATA[创建日期：2016.8.22 1.nodejs 环境：尽管主要工作语言不是nodejs，但是常常在使用到一些包或者插件的时候需要nodejs环境的支持。 node.js环境搭建nodejs是一个c++写的一个解释器，用于把javascript转换成电脑或服务器上可执行的代码。一般用来开发服务端代码或者是作为开发计算机脚本。同时nodejs环境也可以给前端开发带来方便。前端工程师用nodejs主要是因为前端的各种工具大部分基于nodejs的，而这些依赖包可以优化前端的开发流程。安装好了nodejs之后，就会自带一个npm(Node Package Manager)的包管理工具，可以用它去安装一些前端开发其他的工具。 安装步骤： 123456781:先安装一个nvm（用于nodejs的版本管理）~~~~$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash2:安装 nodejs (安装v5.0.0版本，目前最新版本v6.3.0)$ nvm install v5.0.03:设置nodejs默认版本$ nvm alias default v5.0.0 安装Nodejs后即可开始NPM之旅了.在项目中新建一个package.json或者通过npm init，来更好的为NPM服务；配置package.json的dependencies属性和devDependencies属性，指定生产环境和开发环境所需依赖的包；然而目前devDependencies和dependencies区分的不是特别明确，有的时候用devDependencies安装会遇到各种各样依赖的问题（因为逻辑不一样）。目前比较流行的用法是全部扔进dependencies，然后通过build的步骤完成部署上线命令行npm install即可全部安装package.json中的依赖包；或者npm install -g moduleName来全局安装某个模块;npm install --save moduleName安装生产环境所需的包;npm install --dev moduleName安装开发环境所需的包 Ruby环境搭建(可选)gem是ruby环境的安装工具，类似于node中的npm安装好了ruby之后，就会自带一个gem的包管理工具，可以用它去安装一些前端的开发工具。但是gem用的情况比较少，一般用到gem是因为要用Gulp这个类似Grunt的编译工具以及相关的依赖。主要是为了Sass编译用的（因为是ruby写的） 安装步骤 123456789101112131415$ curl -L https://get.rvm.io | bash -s stable//载入 RVM 环境$ source ~/.rvm/scripts/rvm$ rvm -v //打印版本号，检查安装是否正确//用 RVM 安装 Ruby 环境$ rvm requirements$ rvm install 2.3.0//设置 Ruby 版本$ rvm use 2.3.0 --default//安装Rails环境$ gem install rails 默认情况下，Mac OS X 系统已经安装好 Ruby，安装在 /System/Library/Frameworks/Ruby.framework/Versions/Current 目录下。建议不要随便卸载mac自带的ruby，python等程序。自己另外装一套，或者用rvm都是很好的解决办法。 2.推荐前端使用的工具：1)cnpmnpm官网并没有被墙，但是下载第三方依赖包的速度有些时候非常让人捉急，此时就需要cnpm来解决”挤牙膏”的问题。淘宝NPM镜像是一个完整的npmjs.org镜像，你可以用此代替官方版本，同步率目前为10分钟，你可以使用cnpm命令行工具替代默认的NPM，安装： 1$ npm install -g cnpm --registry=https://registry.npm.taobao.org 然后就可以像使用npm一样通过cnpm来安装你所需的包了。 1$ cnpm install moduleName 2)nginx用途：nginx是一个轻量级的Web服务器。前端开发使用nginx主要是为了实现url rewrite（重写）来使用后台的api（避免跨域请求）nginx作为代理服务器，在开发过程中，可转发网络请求，可使局域网内部机器通过nginx发送请求到互联网上的服务器。Nginx还可以实现无缓存的反向代理加速，提高前端开发效率。 安装： 1234567891011121314151617181920212223242526272829303132333435363738//安装nginx$ brew install nginx //启动$ sudo nginx //查看nginx安装目录$ which nginx //到nginx的安装目录下$ cd /usr/local/etc/nginx/servers//编辑配置文件$ vim example.conf server &#123; listen 8080; server_name example.loc; location / &#123; proxy_pass http://localhost:1111; &#125; location ~ ^/(w|api)/ &#123; //匹配任意以/w/ 或者 /api/开头的地址，永久重定向到example.com //rewrite是在同一域名内更改获取资源的路径 rewrite ^/(api|w)/(.*)$ /$1/$2 break; proxy_pass https://example.com &#125;&#125;//重启nginx$ nginx -s reload //编辑hosts文件$ sudo vim /etc/hosts 在文件最后加上⬇️127.0.0.1 example.loc(example.conf中server_name的地址)- 简单使用： 1234567//启动sudo nginx//停止sudo nginx -s stopnginx -s reloadnginx -t mac安装后，nginx的默认配置文件位置一般会在/usr/local/nginx/conf启动后默认在80端口，就可以访问http://localhost/了 3)cookingcooking是什么？ 一个包含了基本依赖（Babel + webpack + 基本 loader）和预配置的 webpack 基于 webpack 但更容易上手的构建工具 cooking安装: 1$ npm i cooking -g 开发模式： 12//默认将启动一个 server$ cooking watch 构建： 12//打包压缩文件，并输出到指定目录下$ cooking build 3.编辑器推荐使用：webstromsublimeAtom 4.Example徒手创建一个project来感受一下cooking脚手架。 1234567891011121314151617181920212223242526272829303132333435363738394041//创建脚手架$ cooking create my-project//terminal log[cooking] - generator project[slush] Using slushfile /Users/tongzhao/.cooking/node_modules/slush-cooking-vue/slushfile.js[09:37:06] Starting &apos;cooking-vue:default&apos;...[?] Give your app a name: test[?] Give your app a description: A vue project.[?] Private? No[?] Need dev server? Yes[?] What CSS preprocessor do you want to use? Only CSS[?] git repository:[?] author:[?] license: ISC[?] Continue? (Y/n) y//创建成功之后到my-project/cooking.conf.js修改其中： devServer: &#123; port: 1111, //修改端口号 publicPath: &apos;/&apos; &#125;, extends: [&apos;vue&apos;]， // 删除 &apos;lint&apos;,这个lint主要是测试过程中报告warning的扩展插件//由于cooking脚手架create过程中不会自动安装lint所以依赖的包//在cooking watch时会报一些错。暂时删掉；//如果需要lint，可用npm安装：// $ npm install eslint-loader --save// $ npm install eslint --save// $ npm install eslint-plugin-react --save// $ npm install eslint-config-airbnb --save// $ npm install eslint-plugin-flow-vars --save// $ npm install eslint-plugin-import --save// $ npm install eslint-plugin-jsx-a11y --save// $ npm install eslint-plugin-react --save`//开始开发$ cooking watch 最后跑到 src/app.vue 中替换代码 1234567891011//app.vue是项目初始展示的页面，使用了vue框架，修改此文件内容只为了测试项目是否可以正常跑通。&lt;template&gt; &lt;h1&gt;cooking test&lt;/h1&gt; &lt;p&gt;i am the 15000 king, i am the new world&lt;/p&gt;&lt;/template&gt;&lt;script&gt; export default &#123; name: &apos;app&apos; &#125;;&lt;/script&gt; 打开 http://localhost:1111/ 查看页面显示]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>nodejs</tag>
+        <tag>nginx</tag>
+        <tag>cookingjs</tag>
+        <tag>cnpm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Swift_UITableView]]></title>
+    <url>%2F2016%2F04%2F20%2FUITableView%2F</url>
+    <content type="text"><![CDATA[UITableView介绍 1. UITableView继承自UIScrollView，支持垂直滚动，而且性能极好 2. UITableView的两种样式： 不分组UITableViewStylePlain； 分组UITableViewStyleGrouped。 3. 如何在UITableView中展示数据：UITableView需要一个数据源(UIDataSource)来展示数据，UITableView会向数据源查询一共有多少行数以及每一行显示什么数据等，没有设置数据源的UITableView只是个空壳。 4. UITableView中数据只有行的概念，并没有列的概念 5. UITableView中每行数据都是一个UITableViewCell，UITableViewCell内部有一个UIView控件(contentView，作为其他元素的父控件)、两个UILabel控件(textLabel、detailTextLabel)、一个UIImageView控件(imageView)，分别用于容器、显示内容、详情和图片。 project1:自己实现UITableView的下拉刷新动画(swift) comming soon project2:UITableViewCell的删除、移动、置顶(swift) comming soon project3:UITableView顶部视图的联动动画 comming soon 本篇文章深度剖析UIKit中的UITableView控件的多种常见用法，笔者将尽可能利用课余时间慢慢完善，希望读者如果有对于UITableview用法的各种困惑邮件或者留言进行交流。并完全使用Swift实现代码。笔者邮箱: 476998612@qq.com]]></content>
+      <categories>
+        <category>SWIFT</category>
+      </categories>
+      <tags>
+        <tag>ios，swift</tag>
+        <tag>UITableView</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Tableview Animate Demo]]></title>
+    <url>%2F2016%2F04%2F18%2FTableViewAnimate%2F</url>
+    <content type="text"><![CDATA[https://github.com/lukastong/CZTableViewAnimateDemo repo link 1写的ios的几个demo，项目连接⬆️ CZTableViewAnimateDemo包含以下四个动画效果1.tableView Cell 编辑模式删除置顶 图片来自于网络 2.tableview headerView 模仿微博自适应高度 图片来自于网络 3.talbeView 下拉刷新 动效实现 图片来自于网络### 4.tableView cell 长按拖动实现方法:—*转载请注明出处]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>ios</tag>
+        <tag>swift</tag>
+        <tag>talbeview</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[下拉刷新动画]]></title>
+    <url>%2F2016%2F03%2F20%2FCZPullRefresh%2F</url>
+    <content type="text"><![CDATA[项目连接请戳这里 CZPullToRefresh These UIScrollView categories makes it super easy to add pull-to-refresh to any UIScrollView (or any of its subclass). Instead of relying on delegates and/or subclassing UIViewController, CZPullToRefresh uses the Objective-C runtime to add the following methods toUIScrollView:1public func addpullToRefreshScrollWithHandler(topInsert: CGFloat ,indicatorType: IndicatorType, actionHandler: handler) Installation Drag the CZPullToRefresh floder in your project that’s all, so easy isn’t it?! Usage: add func “addpullToRefreshScrollWithHandler” in viewDidLoad() add func “stopPullRefreshAnimation” when update view forData parameter handler: doing network request in handler parameter topInsert: insert of tableview top. parameter indicatorType: “SystemIndicator” : use system default indicator animate; “CustomIndicator(indicatorParh: UIBezierPath)” : input a CGPath parameter Adding pull to refresh1234 $yourtableView.addpullToRefreshScrollWithHandler(topInsert, indicatorType: indicatorType) &#123;// prepend data to dataSource, insert cells at top of table view// call [tableView.pullToRefreshView stopAnimating] when done&#125; Stop animating when done1$yourtableView.pullRefreshView?.stopPullRefreshAnimation() ###IndicatorType SystemIndicator use system animation indicator when loading data. CustomIndicator(indicatorPath: UIBezierPath) input a UIBezierPath indicator, which you hope indicator present. other changeable property in code12345678910111213/** after addpullToRefreshScrollWithHandler function modified this prperty, use for transform the indicator centerY offset:(if needed) - default : 0 - parameter +: move down indicator - parameter -: move up indicator */public var indicatorPositionYOffset: CGFloat = 0//MARK: - define refresh view height -private let PullRefreshViewHeight: CGFloat = 70//MARK: - define lineWidth -let lineWidth: CGFloat = 2]]></content>
+      <categories>
+        <category>ios</category>
+      </categories>
+      <tags>
+        <tag>ios</tag>
+        <tag>swift</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chaz VPS iPhone 配置流程]]></title>
+    <url>%2F2016%2F01%2F26%2FchazVps%2F</url>
+    <content type="text"><![CDATA[1.下载App登陆 App Store 付费下载 “shadowrocket” 2.设置12345678910111213141516打开App添加新路⤵️输入服务器、端口、密码；（询问Chaz获取相关信息）⤵️加密方式选择默认的 AES-256-CFB⤵️保存⤵️点击连接 3.连接成功连接成功后，VPS会在手机后台持续连接外网，如不需要翻墙，可手动断开VPS连接。]]></content>
+      <categories>
+        <category>others</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[优雅的 props 回调函数]]></title>
+    <url>%2F2015%2F10%2F26%2Fprops%20callback%2F</url>
+    <content type="text"><![CDATA[优雅的 props 回调函数12345678910onClose = () =&gt; &#123; const &#123; onClose, dispatch &#125; = this.props //add some internal function logic ...... onClose &amp;&amp; onClose()&#125; 这样可以在属性方法调用之前，完成一些组件内的函数逻辑。]]></content>
+      <categories>
+        <category>others</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Http请求 服务器返回值含义]]></title>
+    <url>%2F2015%2F08%2F26%2FhttpResponse%2F</url>
+    <content type="text"><![CDATA[当浏览器从 web 服务器请求服务时，可能会发生错误。从而有可能会返回下面的一系列状态消息： 2xx: 成功 消息 描述 200 OK 请求成功（其后是对GET和POST请求的应答文档。） 201 Created 请求被创建完成，同时新的资源被创建。 202 Accepted 供处理的请求已被接受，但是处理未完成。 203 Non-authoritative Information 文档已经正常地返回，但一些应答头可能不正确，因为使用的是文档的拷贝。 204 No Content 没有新文档。浏览器应该继续显示原来的文档。如果用户定期地刷新页面，而Servlet可以确定用户文档足够新，这个状态代码是很有用的。 205 Reset Content 没有新文档。但浏览器应该重置它所显示的内容。用来强制浏览器清除表单输入内容。 206 Partial Content 客户发送了一个带有Range头的GET请求，服务器完成了它。 3xx: 重定向 消息 描述 300 Multiple Choices 多重选择。链接列表。用户可以选择某链接到达目的地。最多允许五个地址。 301 Moved Permanently 所请求的页面已经转移至新的url。 302 Found 所请求的页面已经临时转移至新的url。 303 See Other 所请求的页面可在别的url下被找到。 304 Not Modified 未按预期修改文档。客户端有缓冲的文档并发出了一个条件性的请求（一般是提供If-Modified-Since头表示客户只想比指定日期更新的文档）。服务器告诉客户，原来缓冲的文档还可以继续使用。 305 Use Proxy 客户请求的文档应该通过Location头所指明的代理服务器提取。 306 Unused 此代码被用于前一版本。目前已不再使用，但是代码依然被保留。 307 Temporary Redirect 被请求的页面已经临时移至新的url。 4xx：客户端错误 消息 描述 400 Bad Request 服务器未能理解请求。 401 Unauthorized 被请求的页面需要用户名和密码。 402 Payment Required 此代码尚无法使用。 403 Forbidden 对被请求页面的访问被禁止。 404 Not Found 服务器无法找到被请求的页面。 405 Method Not Allowed 请求中指定的方法不被允许。 406 Not Acceptable 服务器生成的响应无法被客户端所接受。 407 Proxy Authentication Required 用户必须首先使用代理服务器进行验证，这样请求才会被处理。 408 Request Timeout 请求超出了服务器的等待时间。 409 Conflict 由于冲突，请求无法被完成。 410 Gone 被请求的页面不可用。 411 Length Required “Content-Length” 未被定义。如果无此内容，服务器不会接受请求。 412 Precondition Failed 请求中的前提条件被服务器评估为失败。 413 Request Entity Too Large 由于所请求的实体的太大，服务器不会接受请求。 414 Request-url Too Long 由于url太长，服务器不会接受请求。当post请求被转换为带有很长的查询信息的get请求时，就会发生这种情况。 415 Unsupported Media Type 由于媒介类型不被支持，服务器不会接受请求。 416 服务器不能满足客户在请求中指定的Range头。 417 Expectation Failed 5xx：服务器错误 消息 描述 500 Internal Server Error 请求未完成。服务器遇到不可预知的情况。 501 Not Implemented 请求未完成。服务器不支持所请求的功能。 502 Bad Gateway 请求未完成。服务器从上游服务器收到一个无效的响应。 503 Service Unavailable 请求未完成。服务器临时过载或当机。 504 Gateway Timeout 网关超时。 505 HTTP Version Not Supported 服务器不支持请求中指明的HTTP协议版本。]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>http</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[iTerm快捷键]]></title>
+    <url>%2F2015%2F04%2F26%2FiTerm%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
+    <content type="text"><![CDATA[12345678910111213141516171819202122232425262728293031323334⌘ + Click：可以打开文件，文件夹和链接⌘ + n：新建窗口⌘ + t：新建标签页⌘ + w：关闭当前页⌘ + 数字 &amp; ⌘ + 方向键：切换标签页⌥⌘ + 数字：切换窗口⌘ + enter：切换全屏⌘ + d：左右分屏⇧⌘ + d：上下分屏⌘ + ;：自动补全历史记录⇧⌘ + h：自动补全剪贴板历史⌥⌘ + e：查找所有来定位某个标签页⌘ + r &amp; ⌃ + l：清屏⌘ + /：显示光标位置⌥⌘ + b：历史回放⌘ + f：查找，然后用 tab 和 ⇧ + tab 可以向右和向左补全，补全之后的内容会被自动复制， 还可以用 ⌥ + enter 将查找结果输入终端选中即复制，鼠标中键粘贴⌃ + u：清空当前行⌃ + a：移动到行首⌃ + e：移动到行尾⌃ + f：向前移动⌃ + b：向后移动⌃ + p：上一条命令⌃ + n：下一条命令⌃ + r：搜索历史命令⌃ + y：召回最近用命令删除的文字⌃ + h：删除光标之前的字符⌃ + d：删除光标所指的字符⌃ + w：删除光标之前的单词⌃ + k：删除从光标到行尾的内容⌃ + t：交换光标和之前的字符]]></content>
+      <categories>
+        <category>others</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[git rebase guide]]></title>
+    <url>%2F2015%2F04%2F26%2Fgitrebase%2F</url>
+    <content type="text"><![CDATA[12345678$git checkout master$git pull --ff-only$git checkout branch$git rebase master -i解决了冲突以后$git add -u &amp;&amp; git rebase --continue$git push origin corpOrderList-TopBar -f]]></content>
+      <categories>
+        <category>others</category>
+      </categories>
+  </entry>
+</search>
