@@ -96,7 +96,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="T.Zhao Blog">
-<meta property="og:url" content="http://yoursite.com/categories/web/index.html">
+<meta property="og:url" content="http://yoursite.com/categories/Web/index.html">
 <meta property="og:site_name" content="T.Zhao Blog">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="T.Zhao Blog">
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/web/"/>
+  <link rel="canonical" href="http://yoursite.com/categories/Web/"/>
 
 
 
 
 
-  <title>Category: web | T.Zhao Blog</title>
+  <title>Category: Web | T.Zhao Blog</title>
   
 
 
@@ -288,7 +288,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>web<small>Category</small>
+        <h1>Web<small>Category</small>
         </h1>
       </div>
 
@@ -300,9 +300,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/01/01/Mac下安装Go和配置相应环境/" itemprop="url">
+            <a class="post-title-link" href="/2016/08/26/UbuntuShadowsocks/" itemprop="url">
               
-                <span itemprop="name">Mac下安装Go和配置相应环境</span>
+                <span itemprop="name">Ubuntu 搭建 Shadowsocks</span>
               
             </a>
         
@@ -310,9 +310,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2017-01-01T00:00:00+08:00"
-              content="2017-01-01" >
-          01-01
+              datetime="2016-08-26T00:00:00+08:00"
+              content="2016-08-26" >
+          08-26
         </time>
       </div>
 
@@ -328,9 +328,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2016/10/01/FrontendKnowledge/" itemprop="url">
+            <a class="post-title-link" href="/2016/08/22/pathGuid/" itemprop="url">
               
-                <span itemprop="name">前端开发知识树</span>
+                <span itemprop="name">前端开发 环境搭建</span>
               
             </a>
         
@@ -338,9 +338,65 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-01T00:00:00+08:00"
-              content="2016-10-01" >
-          10-01
+              datetime="2016-08-22T00:00:00+08:00"
+              content="2016-08-22" >
+          08-22
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2016/04/18/TableViewAnimate/" itemprop="url">
+              
+                <span itemprop="name">Tableview Animate Demo</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-04-18T00:00:00+08:00"
+              content="2016-04-18" >
+          04-18
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2015/08/26/httpResponse/" itemprop="url">
+              
+                <span itemprop="name">Http请求 服务器返回值含义</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2015-08-26T00:00:00+08:00"
+              content="2015-08-26" >
+          08-26
         </time>
       </div>
 
@@ -916,71 +972,6 @@
               })
               searchResultList += "</ul>";
               resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === '') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-</body>
-</html>
-tContent.innerHTML = searchResultList;
             }
           }
 
