@@ -101,7 +101,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/08/26/UbuntuShadowsocks/index.html">
 <meta property="og:site_name" content="T.Zhao Blog">
 <meta property="og:description" content="在Ubuntu下安装ss很简单。只需要依次执行下面3条命令： 123apt-get updateapt-get install python-pippip install shadowsocks pip 是 python 下的方便安装的工具，类似 apt-get。 全部执行完毕且没有报错的话，我们的 shadowsocks 就算是装完了。接下来就是配置部署了。 写一个配置文件保存为etc/shad">
-<meta property="og:updated_time" content="2017-04-06T13:29:54.000Z">
+<meta property="og:updated_time" content="2017-10-29T16:30:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu 搭建 Shadowsocks">
 <meta name="twitter:description" content="在Ubuntu下安装ss很简单。只需要依次执行下面3条命令： 123apt-get updateapt-get install python-pippip install shadowsocks pip 是 python 下的方便安装的工具，类似 apt-get。 全部执行完毕且没有报错的话，我们的 shadowsocks 就算是装完了。接下来就是配置部署了。 写一个配置文件保存为etc/shad">
@@ -394,7 +394,7 @@
 <p><code>pip 是 python 下的方便安装的工具，类似 apt-get。</code></p>
 <p>全部执行完毕且没有报错的话，我们的 shadowsocks 就算是装完了。接下来就是配置部署了。</p>
 <p>写一个配置文件保存为etc/shadowsocks.json，文件内容如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;server&quot;:&quot;my_server_ip&quot;,</div><div class="line">    &quot;server_port&quot;:8388,</div><div class="line">    &quot;local_address&quot;: &quot;127.0.0.1&quot;,</div><div class="line">    &quot;local_port&quot;:1080,</div><div class="line">    &quot;password&quot;:&quot;mypassword&quot;,</div><div class="line">    &quot;timeout&quot;:300,</div><div class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</div><div class="line">    &quot;fast_open&quot;: false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;server&quot;:&quot;my_server_ip&quot;,</div><div class="line">    &quot;server_port&quot;:8388,</div><div class="line">    &quot;local_address&quot;: &quot;127.0.0.1&quot;,</div><div class="line">    &quot;local_port&quot;:1080,</div><div class="line">    &quot;password&quot;:&quot;mypassword&quot;,</div><div class="line">    &quot;timeout&quot;:300,</div><div class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</div><div class="line">    &quot;fast_open&quot;: false</div><div class="line">&#125;</div><div class="line"></div><div class="line">or</div><div class="line"></div><div class="line">&#123;</div><div class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</div><div class="line">    &quot;port_password&quot;: &#123;</div><div class="line">        &quot;9990&quot;:&quot;password0&quot;,</div><div class="line">        &quot;9989&quot;:&quot;password1&quot;</div><div class="line">    &#125;,</div><div class="line">    &quot;timeout&quot;:600,</div><div class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>server, server_port, password 需要自行根据自己的实际情况修改。</p>
 <p>配置文件编辑完成后，接下来就可以部署运行了：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//开启服务</div><div class="line">$ ssserver -c /etc/shadowsocks.json -d start</div><div class="line"></div><div class="line">//暂停服务</div><div class="line">$ ssserver -c /etc/shadowsocks.json -d stop</div></pre></td></tr></table></figure>
@@ -430,8 +430,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/18/hexodeploy/" rel="next" title="HEXO deploy Guide">
-                <i class="fa fa-chevron-left"></i> HEXO deploy Guide
+              <a href="/2016/09/18/switchFunction/" rel="next" title="javaScript Switch">
+                <i class="fa fa-chevron-left"></i> javaScript Switch
               </a>
             
           </div>
